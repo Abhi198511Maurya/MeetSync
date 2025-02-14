@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 const start = async () => {
     app.set("mongo_user")
-    const connectionDB = await mongoose.connect("mongodb+srv://abhimaurya198511:Abhi1234@cluster0.ohyfc.mongodb.net/MeetSync?retryWrites=true&w=majority&appName=Cluster0");
+    const connectionDB = await mongoose.connect(process.env.ATLASDB_URL);
 
     console.log(`Mongo connected DB host ${connectionDB.connection.host}`);
 
