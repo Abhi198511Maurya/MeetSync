@@ -1,3 +1,9 @@
+import dotenv from 'dotenv';
+if (process.env.NODE_ENV != "production") {
+
+    dotenv.config();
+}
+
 import express from 'express';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
@@ -24,6 +30,7 @@ app.get("/", (req, res) => {
 
 const start = async () => {
     app.set("mongo_user")
+
     const connectionDB = await mongoose.connect(process.env.ATLASDB_URL);
 
     console.log(`Mongo connected DB host ${connectionDB.connection.host}`);
