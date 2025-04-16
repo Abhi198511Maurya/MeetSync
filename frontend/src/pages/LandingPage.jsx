@@ -5,7 +5,7 @@ export default function LandingPage() {
   return (
     <div className="landingPageContainer">
       <nav>
-        <div className="navHeader"><h2>Apna Video Call</h2></div>
+        <div className="navHeader"><h2>MeetSync</h2></div>
         <div className="navList">
           <p onClick={() => {
                         router("/aljk23")}}>Join as Guest</p>
@@ -19,7 +19,7 @@ export default function LandingPage() {
       <div className="landingMainContainer">
         <div>
           <h1><span style={{ color: "#ff9839" }}>Connect</span> with your loved Ones</h1>
-          <p>cover a distance by apna video call</p>
+          <p>cover a distance by MeetSync</p>
           <div role="button">
 
             <Link to={"/auth"}>Get Start</Link>
